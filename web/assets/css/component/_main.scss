@@ -1,0 +1,349 @@
+main.main {
+
+  .main-visual {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    .visual-img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      min-width: 1600px;
+      background: url("https://www.genesis.com/content/dam/genesis/kr/images/gatemain/kv/genesis-kv-180824-pc.jpg") 50% 0 no-repeat / cover;
+    }
+    .visual-wrap {
+      .visual-line {
+        min-width: 1200px;
+        position: absolute;
+        width: 97%;
+        height: 100%;
+        left: 1.5%;
+        top: 110px;
+        border: 2px solid #a36b4f;
+      }
+      .visual-content {
+        min-width: 1200px;
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+          color: #ffffff;
+          font-size: 74px;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 16px;
+          color: #ffffff;
+          font-weight: 500;
+          line-height: 1.8;
+        }
+        .main-menu {
+          margin-top: 20px;
+          display: inline-block;
+          li {
+            float: left;
+            background: rgba(0, 0, 0, 0.69);
+            border: 1px solid #a36b4f;
+            margin: 0 10px;
+            a {
+              padding:0 100px;
+              line-height: 3;
+              color: #ffffff;
+              font-size: 16px;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-section1 {
+    background: #f7f7f7;
+    .models-list {
+      min-width: 1200px;
+      li {
+        float: left;
+        width: 25%;
+        a {
+          position: relative;
+          display: block;
+          height: 340px;
+          padding: 20px 0;
+          &:before {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 300px;
+            background: #eee;
+            right: 0;
+            top: 20px;
+          }
+          .tit-text {
+            display: block;
+            padding: 20px 0 0 50px;
+            h2 {
+              text-transform: capitalize;
+              font-size: 26px;
+              color: #333;
+              display: block;
+            }
+            .s-text {
+              display: none;
+              margin-top: 30px;
+              color: #a36b4f;
+              font-size: 13px;
+              font-weight: 500;
+              position: relative;
+              &:before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: #a36b4f;
+                left: 0;
+                top: 20px;
+              }
+            }
+          }
+        }
+        &:hover {
+          background: #eee;
+          .tit-text {
+            .s-text {
+              display: inline-block;
+            }
+          }
+          .m-off {
+            display: none;
+          }
+          .m-on {
+            display: block;
+          }
+        }
+        img {
+          position: absolute;
+        }
+        .m-off {
+          width: 350px;
+          right: 50%;
+          bottom: 80px;
+          margin-right: -175px;
+        }
+        .m-on {
+          bottom: 65px;
+          width: 184px;
+          display: none;
+          right: 15%;
+        }
+      }
+      li:nth-child(4) {
+        a {
+          &:before {
+            display: none;
+          }
+
+        }
+      }
+    }
+    @include screen-blg {
+      .models-list {
+        li {
+          a {
+            .m-off {
+              width: 280px;
+              margin-right: -140px;
+            }
+            .m-on {
+              width: 147px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-section2 {
+    text-align: center;
+    padding: 50px;
+    min-width: 1200px;
+    .sec2-tit {
+      padding-bottom: 10px;
+      font-size: 20px;
+      color: #a36b4f;
+      border-bottom: 1px solid #a36b4f;
+    }
+    .news-event {
+      margin-top: 60px;
+      .news-list {
+        .slick-arrow {
+          width: 49px;
+          height: 105px;
+          background: rgba(0, 0, 0, 0.8);
+          font-size: 0;
+          border: 0;
+          position: absolute;
+          z-index: 100;
+          top: 25%;
+          left: 10px;
+        }
+        .slick-prev {
+          &:before {
+            position: absolute;
+            content: '';
+            top: 30px;
+            left: 13px;
+            width: 23px;
+            height: 45px;
+            z-index: 101;
+            background: url("https://www.genesis.com/content/dam/genesis/kr/images/common/btn_prev.png") 50% 0 no-repeat;
+          }
+        }
+        .slick-next {
+          left: unset;
+          right: 10px;
+          &:before {
+            position: absolute;
+            content: '';
+            top: 30px;
+            left: 14px;
+            width: 23px;
+            height: 45px;
+            z-index: 101;
+            background: url("https://www.genesis.com/content/dam/genesis/kr/images/common/btn_next.png") 50% 0 no-repeat;
+          }
+        }
+        .slick-dots {
+          margin: 50px 0;
+          li {
+            display: inline-block;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border: 0;
+            background: #ddd;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin: 0 4px;
+            button {
+              display: none;
+            }
+            &.slick-active {
+              background: #a36b4f;
+            }
+          }
+        }
+        .news-item {
+          float: left;
+          width: 33.33%;
+          padding:0 20px;
+          position: relative;
+          a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+          }
+        }
+        img {
+        }
+        dl {
+          text-align: left;
+          margin-top: 30px;
+          dt {
+            font-size: 20px;
+            color: #333333;
+            text-transform: uppercase;
+          }
+          dd {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 15px;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+  .main-section3 {
+    background: #000;
+    text-align: center;
+    padding: 50px 0;
+    h4 {
+      color: #ffffff;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .sns-icon {
+      margin-top: 30px;
+      a {
+        padding: 0 35px;
+      }
+    }
+  }
+}
+
+.top-btn {
+  opacity: 0;
+  position: fixed;
+  bottom: 30px;
+  right: 17px;
+  height: 100px;
+  width: 50px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  &.is-active {
+    opacity: 1;
+  }
+  a {
+    .text {
+      position: absolute;
+      right: 50%;
+      margin-right: -9.5px;
+      bottom: 40px;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #a36b4f;
+      white-space: nowrap;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .line {
+      position: absolute;
+      display: inline-block;
+      width: 1px;
+      height: 33px;
+      right: 50%;
+      bottom: 0;
+      background: #a36b4f;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+  }
+  &:hover {
+    a {
+      .text {
+        bottom: 64px;
+      }
+      .line {
+        height: 55px;
+      }
+    }
+  }
+}
