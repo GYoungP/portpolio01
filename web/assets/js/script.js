@@ -52,13 +52,6 @@ var myApp = {
 
     main: function () {
 
-        $('.news-list').slick({
-            autoplay: true,
-            infinite: true,
-            dots: true,
-            slidesToShow: 3,
-            slidesToScroll: 1
-        });
 
         $('.section').on('mousewheel', function (event,delta) {
             if (delta > 0) {
