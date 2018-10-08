@@ -18,16 +18,12 @@
 
     <script src="../assets/js/lib/jquery-1.12.2.min.js"></script>
     <script src="../assets/js/lib/jquery.easing.1.3.js"></script>
-
     <script src="../assets/js/lib/slick.js"></script>
 
     <script src="../assets/js/lib/jquery.mousewheel.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
-    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.css" />-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.js"></script>-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.js"></script>-->
-    <!--&lt;!&ndash; 아래 선은 `scrollOverflow:true` 옵션을 쓰시는 경우에만 넣으셔야 합니다. &ndash;&gt;-->
-    <!--&lt;!&ndash;<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/scrolloverflow.min.js"></script>&ndash;&gt;-->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/vendors/easings.min.js"></script>
@@ -41,6 +37,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.extensions.min.js"></script>
+
 
 
     <script src="../assets/js/script.js?v=js_ver2"></script>
@@ -62,16 +59,16 @@
             <div class="gnb">
                 <ul class="nav">
                     <li>
-                        <a href="#!">home</a>
+                        <a href="#">home</a>
                     </li>
                     <li>
-                        <a href="#!">about me</a>
+                        <a href="#about-me">about me</a>
                     </li>
                     <li>
-                        <a href="#!">portfolio</a>
+                        <a href="#portfolio-work">portfolio</a>
                     </li>
                     <li>
-                        <a href="#!">contact us</a>
+                        <a href="#contact-us">contact us</a>
                     </li>
                 </ul>
             </div>
@@ -79,44 +76,41 @@
     </header>
 
     <main class="main">
-        <div class="main-visual">
-            <video loop muted autoplay>
-                <source src="https://static.videezy.com/system/resources/previews/000/007/217/original/LOWPOLY_COLOR_PARTY_TERRAIN_LOOP_4K.mp4">
-            </video>
-            <div class="visual-screen"></div>
-            <div class="visual-text">
-                <div class="container">
-                    <p>Hello, My name is <span class="yellow">Pakr-JiYoung</span></p>
-                    <h1>이곳은 저의 포트폴리오 사이트입니다.<br>
-                        방문해 주셔서 감사합니다.</h1>
-                    <p class="en">Here is my portfolio site. Thank you for visiting.</p>
+        <div class="main-visual-section">
+            <div class="main-visual">
+                <div class="visual visual1">
+                    <div class="visual-bg"></div>
+                    <div class="visual-screen"></div>
+                </div>
+                <div class="visual visual2">
+                    <div class="visual-bg"></div>
+                    <div class="visual-screen"></div>
+                </div>
+                <div class="visual visual3">
+                    <div class="visual-bg"></div>
+                    <div class="visual-screen"></div>
+                </div>
+            </div>
+            <div class="main-visual-text">
+                <div class="visual-text">
+                    <div class="container">
+                        <p class="sub-tit" data-aos="fade-up" data-aos-delay="100">Hello, My name is <span class="yellow">Pakr-JiYoung</span></p>
+                        <h1 data-aos="fade-down" data-aos-delay="600">이곳은 저의 포트폴리오 사이트입니다.<br>
+                            방문해 주셔서 감사합니다.</h1>
+                        <p class="en" data-aos="fade-up" data-aos-delay="300">Here is my portfolio site. Thank you for visiting.</p>
+                    </div>
                 </div>
             </div>
             <div class="visual-btom-icon">
-                scroll down
-                <img src="../assets/img/scroll.png" alt="">
-            </div>
-        </div>
-        <div class="main-visual main-visual2">
-            <video loop muted autoplay>
-                <source src="https://static.videezy.com/system/resources/previews/000/007/313/original/Plexus.mp4">
-            </video>
-            <div class="visual-screen"></div>
-            <div class="visual-text">
-                <div class="container">
-                    <p>Hello, My name is <span class="yellow">Pakr-JiYoung</span></p>
-                    <h1>이곳은 저의 포트폴리오 사이트입니다.<br>
-                        방문해 주셔서 감사합니다.</h1>
-                    <p class="en">Here is my portfolio site. Thank you for visiting.</p>
-                </div>
-            </div>
-            <div class="visual-btom-icon">
-                scroll down
-                <img src="../assets/img/scroll.png" alt="">
+                <a href="#about-me">
+                    scroll down
+                    <img src="../assets/img/scroll.png" alt="">
+                </a>
             </div>
         </div>
 
         <section class="about-me main-section">
+            <span id="about-me"></span>
             <div class="side-bar bar1">
                 <div class="side-text">
                     <i class="fas fa-long-arrow-alt-left"></i>
@@ -209,7 +203,7 @@
                 <div class="tit">
                     <span class="sm-text">precede</span>
                     <h2>my <span class="yellow"> expertise</span></h2>
-                    <p>I'm a Web Publisher from Korea. I love CSS and JavaScript which along with other<br>
+                    <p class="tit-area">I'm a Web Publisher from Korea. I love CSS and JavaScript which along with other<br>
                         acronyms gives me superpower to develop</p>
                 </div>
                 <div class="my-expertise-content">
@@ -276,6 +270,7 @@
             </div>
         </section>
         <section class="portfolio-work main-section">
+            <span id="portfolio-work"></span>
             <div class="side-bar bar1">
                 <div class="side-text">
                     <i class="fas fa-long-arrow-alt-left"></i>
@@ -287,11 +282,11 @@
                     <h2>portfolio <span class="yellow"> work</span></h2>
                 </div>
                 <div class="portfolio-work-btn">
-                    <a href="#!" class="on">web publishing</a>
-                    <a href="#!">web design</a>
+                    <a href="#!" class="portfolio-btn">web publishing</a>
+                    <a href="#!" class="portfolio-btn">web design</a>
                 </div>
-                <div class="portfolio-work-item portfolio-item1">
-                    <ul class="portfolio-work-items">
+                <div class="portfolio-work-item">
+                    <ul class="portfolio-work-items portfolio-item1">
                         <li class="portfolio-work-link item1-link1">
                             <a href="http://nnnbdnnn.dothome.co.kr/genesis/web/public/main.html" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/page1.jpg" alt=""></div>
@@ -383,11 +378,9 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div class="portfolio-work-item portfolio-item2">
-                    <ul class="portfolio-work-items">
+                    <ul class="portfolio-work-items portfolio-item2">
                         <li class="portfolio-work-link item2-link1">
-                            <a href="#!"></a>
+                            <a href="http://nnnbdnnn.dothome.co.kr/before/img/d-pape1.jpg" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape1.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -397,7 +390,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link2">
-                            <a href="#!"></a>
+                            <a href="http://c-gagu.com" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape6.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -407,7 +400,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link3">
-                            <a href="#!"></a>
+                            <a href="http://nnnbdnnn.dothome.co.kr/before/img/d-pape8.jpg" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape8.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -417,7 +410,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link4">
-                            <a href="#!"></a>
+                            <a href="http://www.gagujs.co.kr" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape7.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -427,7 +420,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link5">
-                            <a href="#!"></a>
+                            <a href="https://www.edunavi.kr/mobile/webzine.do" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape9.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -437,7 +430,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link6">
-                            <a href="#!"></a>
+                            <a href="http://nnnbdnnn.dothome.co.kr/before/img/d-pape4.jpg" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape4.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -447,7 +440,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link7">
-                            <a href="#!"></a>
+                            <a href="http://nnnbdnnn.dothome.co.kr/before/img/d-pape2.jpg" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape2.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -457,7 +450,7 @@
                             </div>
                         </li>
                         <li class="portfolio-work-link item2-link8">
-                            <a href="#!"></a>
+                            <a href="http://nnnbdnnn.dothome.co.kr/before/img/d-pape5.jpg" target="_blank"></a>
                             <div class="link-img"><img src="../assets/img/d-pape5.jpg" alt=""></div>
                             <div class="screen">
                                 <div class="icon"><i class="fas fa-door-open"></i></div>
@@ -481,6 +474,7 @@
             </div>
         </section>
         <section class="contact-us main-section">
+            <span id="contact-us"></span>
             <div class="contact-top">
                 <div class="tit">
                     <h2>Contact <span class="yellow"> us</span></h2>
@@ -499,6 +493,11 @@
             </div>
         </section>
     </main>
+
+
+    <div class="top-btn">
+        <span class="top"><a href="#">Top</a></span>
+    </div>
 
     <footer class="footer">
         <div class="container">

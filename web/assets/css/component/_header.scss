@@ -13,7 +13,7 @@ header.header {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   &.is-active {
-    //background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.8);
   }
   .logo {
     display: inline-block;
