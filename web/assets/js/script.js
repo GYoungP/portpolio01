@@ -16,9 +16,10 @@ var myApp = {
         myApp.TopBtn();
     },
     header: function () {
-        // var gnb = $('.nav li');
-        // var rMenu = $('.r-menu-item');
-        var header = $('header');
+        const gnb = $('.nav li a');
+        const menuSection = $('#menu-section');
+        const header = $('header');
+        const doc = $('html,body');
 
         $(window).on('scroll',function () {
             var sct = $(window).scrollTop();
@@ -30,10 +31,18 @@ var myApp = {
             }
         });
 
+        gnb.click(function () {
+            doc.stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 1500, 'easeOutExpo');
+            return false;
+        })
+
+
     },
 
     main: function () {
-
+        const mainSection = $('.main-section');
+        const portfolioMenu = $('.portfolio-btn');
+        const portfolioContent = $('.portfolio-work-items');
 
         $('.main-visual').slick({
             dots: true,
@@ -53,7 +62,6 @@ var myApp = {
             easing: 'easeInOutBack',
         });
 
-
         $('.main-visual-section').on('mousewheel', function (event,delta) {
             if (delta > 0) {
                 var prev = $(this).prev().offset().top;
@@ -65,9 +73,6 @@ var myApp = {
             }
         });
 
-        var mainSection = $('.main-section');
-
-
         $(window).on('scroll',function () {
             var sct =$(window).scrollTop();
 
@@ -75,36 +80,41 @@ var myApp = {
                 var self = $(this),
                     mainSectionOft = self.offset().top;
 
-                if (sct > mainSectionOft - 100) {
+                if (sct > mainSectionOft - 200) {
                     self.addClass('is-active').siblings().removeClass('is-active');
                 }
             });
 
         });
 
-        const menu = $('.portfolio-btn');
-        const content = $('.portfolio-work-items');
-
-        menu.click(function () {
+        portfolioMenu.click(function () {
             var self = $(this);
-            self.addClass('on').siblings().removeClass('on')
+            self.addClass('on').siblings().removeClass('on');
 
 
             var idx = self.index();
-            content.eq(idx).fadeIn(600).addClass('is-active').siblings().fadeOut(600).removeClass('is-active');
+            portfolioContent.eq(idx).fadeIn(600).addClass('is-active').siblings().fadeOut(600).removeClass('is-active');
+
         }).eq(0).trigger('click');
 
     },
 
     TopBtn : function () {
+        const topBtn = $('.top-btn');
+        const doc = $('html,body');
+
         $(window).on('scroll', function () {
             var sct =$(window).scrollTop();
 
             if (sct > 100) {
-                $('.top-btn').addClass('is-active');
+               topBtn.addClass('is-active');
             } else {
-                $('.top-btn').removeClass('is-active');
+                topBtn.removeClass('is-active');
             }
+        });
+
+        topBtn.on('click',function () {
+            doc.animate({scrollTop:0}, 1500, 'easeOutExpo' )
         })
     }
 
