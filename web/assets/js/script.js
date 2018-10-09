@@ -20,6 +20,7 @@ var myApp = {
         const menuSection = $('#menu-section');
         const header = $('header');
         const doc = $('html,body');
+        const mGnbBtn = $('.m-gnb-btn');
 
         $(window).on('scroll',function () {
             var sct = $(window).scrollTop();
@@ -34,7 +35,15 @@ var myApp = {
         gnb.click(function () {
             doc.stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 1500, 'easeOutExpo');
             return false;
-        })
+        });
+
+        mGnbBtn.on('click',function () {
+            doc.toggleClass('is-m_gnb-open');
+        });
+
+        $('.main').on('click', function () {
+            doc.removeClass('is-m_gnb-open');
+        });
 
 
     },

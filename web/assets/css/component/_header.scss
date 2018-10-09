@@ -65,4 +65,82 @@ header.header {
       }
     }
   }
+  .m-gnb {
+    display: none;
+  }
+  .gnb-screen {
+    display: none;
+  }
+  @include screen-md {
+    height: 60px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .is-m_gnb-open & {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .m-gnb {
+      float: right;
+      display: inline-block;
+      .m-gnb-btn {
+        i{
+          cursor: pointer;
+          color: #ffffff;
+          line-height: 60px;
+          font-size: 30px;
+        }
+        .btn-close {
+          display: none;
+        }
+        .is-m_gnb-open & {
+          .btn-open {
+            display: none;
+          }
+          .btn-close {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .logo {
+      height: 50px;
+      line-height: 50px;
+      img {
+        width: 70%;
+        margin-top: 10px;
+      }
+    }
+    .gnb {
+      display: none;
+      margin-right: unset;
+      line-height: unset;
+      float: none;
+      position: fixed;
+      width: 100%;
+      height: 380px;
+      top: 60px;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      .nav {
+        margin-top: 50px;
+        li {
+          display: block;
+          float: none;
+          margin: unset;
+          a {
+            font-size: 22px;
+            line-height: 3;
+            display: inline-block;
+          }
+        }
+      }
+      .is-m_gnb-open & {
+        display: block;
+      }
+    }
+  }
+  @include screen-xxs {
+    min-width: 340px;
+  }
 }
