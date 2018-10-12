@@ -234,9 +234,14 @@ body, html {
 .container {
   max-width: 1350px;
   margin: 0 auto; }
-
-.container2 {
-  width: 100%; }
+  @media only screen and (max-width: 1500px) {
+    .container {
+      width: 100%;
+      padding: 0 5%; } }
+  @media only screen and (max-width: 780px) {
+    .container {
+      width: 100%;
+      padding: 0 2%; } }
 
 /* typography */
 h1, h2 {
@@ -761,6 +766,7 @@ header.header {
       float: left;
       margin: 0 28px; }
       header.header .gnb .nav li a {
+        font-size: 14px;
         display: block;
         color: #ffffff;
         text-transform: uppercase;
@@ -844,10 +850,44 @@ header.header {
       min-width: 340px; } }
 
 body {
-  font-family: 'Exo 2', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
+
+.kolang {
+  font-family: NanumSquare; }
+
+.tit .sm-text {
+  font-size: 11px;
+  color: #999999;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  position: relative; }
+  .tit .sm-text:before {
+    position: absolute;
+    content: '';
+    width: 130px;
+    height: 1px;
+    background: #cacaca;
+    top: 6px;
+    left: 130px; }
+@media only screen and (max-width: 450px) {
+  .tit .sm-text {
+    font-size: 10px; }
+    .tit .sm-text:before {
+      width: 90px; } }
 
 .yellow {
   color: #ffd308; }
+
+h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #2d2d2d;
+  font-weight: 600;
+  margin-top: 30px; }
+  @media only screen and (max-width: 450px) {
+    h2 {
+      font-size: 36px;
+      margin-top: 20px; } }
 
 main.main {
   background: url("../../assets/img/bg.png"); }
@@ -870,7 +910,11 @@ main.main {
       display: table-cell;
       vertical-align: middle;
       color: #ffffff;
-      z-index: 100; }
+      z-index: 100;
+      font-size: 0; }
+      main.main .main-visual-section .main-visual-text .top-text {
+        font-size: 30px;
+        position: relative; }
       main.main .main-visual-section .main-visual-text p {
         color: #ffffff;
         font-size: 30px;
@@ -879,10 +923,9 @@ main.main {
         text-transform: uppercase;
         margin-top: 16px;
         font-size: 45px;
-        line-height: 1.5;
-        font-family: NanumSquare; }
+        line-height: 1.5; }
       main.main .main-visual-section .main-visual-text .en {
-        font-size: 16px;
+        font-size: 15px;
         margin-top: 10px; }
     main.main .main-visual-section .visual-btom-icon {
       position: absolute;
@@ -890,17 +933,43 @@ main.main {
       left: 50%;
       margin-left: -30px; }
       main.main .main-visual-section .visual-btom-icon a {
+        display: inline-block;
+        position: relative;
         color: #ffffff;
         font-size: 12px;
         -webkit-transition: all 1s;
         -moz-transition: all 1s;
         -ms-transition: all 1s;
         -o-transition: all 1s;
-        transition: all 1s; }
+        transition: all 1s;
+        -webkit-animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+        animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite; }
       main.main .main-visual-section .visual-btom-icon img {
         padding-top: 10px;
         display: block;
         margin: 0 auto; }
+@keyframes nudgeMouse {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(14px);
+    transform: translateY(14px); }
+  30% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(14px);
+    transform: translateY(14px); }
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  80% {
+    -webkit-transform: translateY(14px);
+    transform: translateY(14px); }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
     @media only screen and (max-width: 990px) {
       main.main .main-visual-section .main-visual-text p {
         font-size: 3.9vw; }
@@ -992,35 +1061,6 @@ main.main {
         color: #ffffff; }
       main.main .side-bar.bar2 i {
         color: #ffffff; }
-  main.main .tit .sm-text {
-    font-size: 11px;
-    color: #999999;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    position: relative; }
-    main.main .tit .sm-text:before {
-      position: absolute;
-      content: '';
-      width: 130px;
-      height: 1px;
-      background: #cacaca;
-      top: 6px;
-      left: 130px; }
-  @media only screen and (max-width: 450px) {
-    main.main .tit .sm-text {
-      font-size: 10px; }
-      main.main .tit .sm-text:before {
-        width: 90px; } }
-  main.main h2 {
-    font-size: 45px;
-    text-transform: uppercase;
-    color: #2d2d2d;
-    font-weight: 600;
-    margin-top: 30px; }
-    @media only screen and (max-width: 450px) {
-      main.main h2 {
-        font-size: 36px;
-        margin-top: 20px; } }
   main.main .about-me .tit {
     opacity: 0;
     transform: translateX(-400px);
@@ -1040,7 +1080,6 @@ main.main {
     main.main .about-me .l-content p {
       font-size: 15px;
       color: #555555;
-      font-family: NanumSquare;
       margin-top: 22px;
       line-height: 1.7;
       opacity: 0;
@@ -1200,13 +1239,6 @@ main.main {
     position: relative;
     z-index: 0;
     overflow: hidden; }
-    main.main .my-expertise video {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      top: 0;
-      left: 0;
-      z-index: 0; }
     main.main .my-expertise:before {
       position: absolute;
       content: '';
@@ -1221,9 +1253,17 @@ main.main {
     main.main .my-expertise h2 {
       color: #ffffff;
       display: inline-block; }
-    main.main .my-expertise .tit-area {
-      display: inline-block;
-      margin-left: 200px; }
+    main.main .my-expertise .sub-link {
+      float: right;
+      margin-top: 60px; }
+      main.main .my-expertise .sub-link:hover a {
+        text-decoration: underline; }
+      main.main .my-expertise .sub-link a {
+        text-transform: uppercase;
+        color: #ffc818; }
+        main.main .my-expertise .sub-link a i {
+          vertical-align: middle;
+          margin-left: 10px; }
     main.main .my-expertise .my-expertise-content .my-expertise-item {
       width: 50%;
       float: left;
@@ -1232,16 +1272,17 @@ main.main {
         font-size: 50px;
         color: #ffffff;
         float: left;
-        margin-top: 8px; }
+        margin-top: 3px; }
       main.main .my-expertise .my-expertise-content .my-expertise-item .text {
         margin-left: 80px; }
         main.main .my-expertise .my-expertise-content .my-expertise-item .text h3 {
-          font-size: 24px;
+          font-size: 20px;
           color: #ffffff;
           line-height: 1.3;
+          font-weight: 400;
           text-transform: uppercase; }
         main.main .my-expertise .my-expertise-content .my-expertise-item .text p {
-          margin-top: 15px;
+          margin-top: 14px;
           display: block;
           margin-left: 0;
           line-height: 1.5; }
@@ -1295,8 +1336,6 @@ main.main {
       main.main .my-expertise .tit-area {
         margin-left: 3%; } }
     @media only screen and (max-width: 990px) {
-      main.main .my-expertise h2 {
-        display: block; }
       main.main .my-expertise .tit-area {
         margin-left: 0;
         margin-top: 22px;
@@ -1309,6 +1348,8 @@ main.main {
       main.main .my-expertise .my-expertise-content .my-expertise-item:nth-child(3) {
         padding-right: 30px; } }
     @media only screen and (max-width: 600px) {
+      main.main .my-expertise .sub-link {
+        margin-top: 40px; }
       main.main .my-expertise .my-expertise-content .my-expertise-item {
         width: 100%;
         float: unset;
@@ -1384,20 +1425,22 @@ main.main {
           position: absolute;
           display: none; }
           main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon {
-            margin-top: 27%; }
+            margin-top: 29%; }
             main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
               font-size: 40px;
               color: #ffd308; }
           main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .text-tit {
             color: #ffffff;
-            font-size: 20px;
+            font-size: 18px;
             text-transform: uppercase;
-            margin-top: 20px;
-            display: block; }
+            margin-top: 7px;
+            display: block;
+            font-weight: 500; }
           main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen p {
             margin-top: 5px;
             color: rgba(255, 255, 255, 0.75);
-            font-size: 14px;
+            font-size: 13px;
+            line-height: 1.5;
             text-transform: uppercase; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link:hover .screen {
           display: block; }
@@ -1407,16 +1450,10 @@ main.main {
       top: 0;
       margin: 9% auto;
       width: 81%; }
-    main.main .portfolio-work .portfolio-item2 .item2-link1 .link-img img {
-      height: 145%; }
     main.main .portfolio-work .portfolio-item2 .item2-link6 .link-img img {
       height: 90%; }
-    main.main .portfolio-work .portfolio-item2 .item2-link7 .link-img img {
-      height: 268%; }
-    main.main .portfolio-work .portfolio-item2 .item2-link8 .link-img img {
-      height: 200%; }
     main.main .portfolio-work .portfolio-item2 .item2-link9 .link-img img {
-      height: 90%; }
+      height: 91%; }
     main.main .portfolio-work .portfolio-work-item .portfolio-work-items .item1-link7 .screen .text-tit {
       font-size: 17px;
       font-weight: 600; }
@@ -1431,51 +1468,38 @@ main.main {
       transform: translateY(0); }
     @media only screen and (max-width: 1200px) {
       main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link {
-        height: 248px; }
-        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon {
-          margin-top: 30%; }
-          main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
-            font-size: 30px; }
+        height: 255px; }
+        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
+          font-size: 30px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .text-tit {
-          font-size: 16px;
-          margin-top: 14px; }
+          font-size: 16px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen p {
           font-size: 12px; } }
     @media only screen and (max-width: 990px) {
       main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link {
         width: 47.4%;
         height: 305px; }
-        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon {
-          margin-top: 27%; }
-          main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
-            font-size: 40px; }
+        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
+          font-size: 40px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .text-tit {
-          font-size: 20px;
-          margin-top: 20px; }
+          font-size: 18px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen p {
-          font-size: 15px; } }
+          font-size: 13px; } }
     @media only screen and (max-width: 780px) {
       main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link {
         width: 47.4%;
         height: 255px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
-          font-size: 30px; }
-        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .text-tit {
-          margin-top: 15px; } }
+          font-size: 30px; } }
     @media only screen and (max-width: 600px) {
       main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link {
         width: 95%;
         margin: 2.5%;
         height: 370px; }
-        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon {
-          margin-top: 27%; }
-          main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
-            font-size: 40px; }
+        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
+          font-size: 40px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .text-tit {
-          font-size: 20px;
-          margin-top: 20px; }
-        main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen p {
-          font-size: 15px; } }
+          font-size: 18px; } }
     @media only screen and (max-width: 450px) {
       main.main .portfolio-work .portfolio-work-btn a {
         font-size: 12px;
@@ -1484,11 +1508,9 @@ main.main {
       main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link {
         width: 95%;
         margin: 2.5%;
-        height: 270px; }
+        height: 285px; }
         main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon {
-          margin-top: 25%; }
-          main.main .portfolio-work .portfolio-work-item .portfolio-work-items .portfolio-work-link .screen .icon i {
-            font-size: 40px; } }
+          margin-top: 25%; } }
   main.main .contact-us {
     padding: 0;
     text-align: center; }
@@ -1585,15 +1607,6 @@ main.main {
   .top-btn.is-active {
     bottom: 5%; }
 
-@media only screen and (max-width: 1500px) {
-  .container {
-    width: 100%;
-    padding: 0 5%; } }
-@media only screen and (max-width: 780px) {
-  .container {
-    width: 100%;
-    padding: 0 2%; } }
-
 /* footer */
 footer.footer {
   background: #252525;
@@ -1611,6 +1624,17 @@ footer.footer {
       color: #e1e1e1;
       line-height: 1.6;
       font-size: 14px; }
+      footer.footer .l-footer address .add {
+        position: relative;
+        padding-right: 20px; }
+        footer.footer .l-footer address .add .line {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 10px;
+          background: #555;
+          top: 4px;
+          right: 8px; }
     footer.footer .l-footer p {
       font-size: 13px;
       margin-top: 10px;
@@ -1646,5 +1670,219 @@ footer.footer {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
+
+.history h3 {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase; }
+.history .top-visual {
+  height: 550px;
+  position: relative; }
+  .history .top-visual .visual-bg {
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/img/sub-top.jpg") 50% 50% no-repeat/cover; }
+  .history .top-visual .screen {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 0; }
+  .history .top-visual h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    font-weight: 500;
+    top: 44%;
+    left: calc(50% - 242px);
+    min-width: 500px; }
+  .history .top-visual p {
+    min-width: 420px;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    top: 56%;
+    left: calc(50% - 209px); }
+.history .main-content {
+  padding: 100px 0;
+  background: url("../../assets/img/bg.png"); }
+  .history .main-content .top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .history .main-content .top-menu .l-content {
+      width: 60%;
+      padding-right: 50px; }
+      .history .main-content .top-menu .l-content p {
+        margin-top: 30px;
+        font-size: 16px;
+        color: #222; }
+    .history .main-content .top-menu .r-content {
+      background: #000;
+      border: 10px solid #ffffff;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      width: 340px;
+      height: 340px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+      background: url("../../assets/img/photo.jpg") 50% 50% no-repeat;
+      -webkit-background-size: 180%;
+      background-size: 180%; }
+  .history .main-content .btom-menu {
+    margin-top: 80px;
+    display: flex; }
+    .history .main-content .btom-menu p {
+      font-size: 14px;
+      margin-top: 20px; }
+      .history .main-content .btom-menu p strong {
+        font-weight: 600;
+        margin-right: 10px; }
+    .history .main-content .btom-menu .btm-l-con {
+      width: 50%; }
+    .history .main-content .btom-menu .btm-r-con {
+      width: 50%;
+      display: flex; }
+      .history .main-content .btom-menu .btm-r-con .tit-area {
+        width: 40%; }
+      .history .main-content .btom-menu .btm-r-con .form-area {
+        width: 60%;
+        display: block; }
+        .history .main-content .btom-menu .btm-r-con .form-area input {
+          height: 40px;
+          width: 49.5%;
+          float: left;
+          padding-left: 15px;
+          font-size: 12px;
+          background: 0;
+          border: 1px solid #ccc; }
+          .history .main-content .btom-menu .btm-r-con .form-area input + input {
+            margin-left: 1%; }
+        .history .main-content .btom-menu .btm-r-con .form-area textarea {
+          resize: vertical;
+          background: 0;
+          margin-top: 7px;
+          width: 100%;
+          padding: 15px;
+          display: inline-block;
+          font-size: 12px;
+          border: 1px solid #ccc; }
+        .history .main-content .btom-menu .btm-r-con .form-area button {
+          width: 100%;
+          background: #363636;
+          border: 0;
+          color: #ffffff;
+          height: 30px;
+          font-size: 14px;
+          margin-top: 7px; }
+  .history .main-content .history {
+    margin-top: 70px; }
+    .history .main-content .history .history-content {
+      overflow-x: auto; }
+      .history .main-content .history .history-content .history-con {
+        width: 1350px;
+        height: 270px; }
+      .history .main-content .history .history-content .top-text {
+        margin-top: 40px; }
+        .history .main-content .history .history-content .top-text .line {
+          margin-right: 20px; }
+        .history .main-content .history .history-content .top-text .text {
+          float: left;
+          margin-left: 30px;
+          width: 175px; }
+        .history .main-content .history .history-content .top-text .text2 {
+          margin-left: 218px;
+          width: 180px; }
+          .history .main-content .history .history-content .top-text .text2 .line {
+            background: #8ec9cd; }
+        .history .main-content .history .history-content .top-text .text3 {
+          margin-left: 200px;
+          width: 275px; }
+          .history .main-content .history .history-content .top-text .text3 .line {
+            background: #ffc90a; }
+      .history .main-content .history .history-content .btom-text {
+        margin-top: -39px; }
+        .history .main-content .history .history-content .btom-text .text {
+          display: inline-block;
+          width: 175px;
+          margin-left: 55px; }
+        .history .main-content .history .history-content .btom-text .text-group {
+          float: left;
+          text-align: right;
+          margin-top: 35px; }
+        .history .main-content .history .history-content .btom-text .line {
+          margin-left: 20px;
+          background: #8fcca2; }
+        .history .main-content .history .history-content .btom-text .text5 {
+          margin-left: 243px;
+          width: 205px; }
+          .history .main-content .history .history-content .btom-text .text5 .line {
+            background: #6f7b93; }
+        .history .main-content .history .history-content .btom-text .text6 {
+          margin-left: 87px;
+          width: 320px; }
+          .history .main-content .history .history-content .btom-text .text6 .line {
+            background: #ec6d5e; }
+      .history .main-content .history .history-content .line {
+        float: left;
+        display: inline-block;
+        width: 2px;
+        background: #ec6d5e;
+        height: 115px; }
+      .history .main-content .history .history-content .day {
+        font-size: 16px;
+        color: #ec6d5e;
+        font-weight: 600; }
+      .history .main-content .history .history-content .area {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.4; }
+      .history .main-content .history .history-content img {
+        width: 100%;
+        margin-top: -44px; }
+  @media only screen and (max-width: 600px) {
+    .history .main-content .top-menu {
+      display: block; }
+      .history .main-content .top-menu .l-content {
+        width: 100%;
+        padding: 0; }
+      .history .main-content .top-menu .r-content {
+        display: none; } }
+  @media only screen and (max-width: 1200px) {
+    .history .main-content .btom-menu .btm-l-con {
+      width: 48%;
+      margin-right: 2%; }
+    .history .main-content .btom-menu .btm-r-con .tit-area {
+      min-width: 160px; } }
+  @media only screen and (max-width: 780px) {
+    .history .main-content .btom-menu {
+      display: block; }
+      .history .main-content .btom-menu .btm-l-con {
+        width: 100%; }
+      .history .main-content .btom-menu .btm-r-con {
+        margin-top: 70px;
+        width: 100%; } }
+  @media only screen and (max-width: 450px) {
+    .history .main-content .btom-menu .btm-r-con {
+      display: block; }
+      .history .main-content .btom-menu .btm-r-con .tit-area {
+        width: 100%; }
+      .history .main-content .btom-menu .btm-r-con .form-area {
+        width: 100%;
+        margin-top: 20px; } }
+.history .btom-content {
+  background: url("../../assets/img/bg.png");
+  height: 300px;
+  padding-top: 100px; }
+  .history .btom-content .root_daum_roughmap {
+    margin: 0 auto;
+    width: 100%; }
+  .history .btom-content .wrap_controllers {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */

@@ -20,6 +20,19 @@ footer.footer {
       color: #e1e1e1;
       line-height: 1.6;
       font-size: 14px;
+      .add {
+        position: relative;
+        padding-right: 20px;
+        .line {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 10px;
+          background: #555;
+          top: 4px;
+          right: 8px;
+        }
+      }
     }
     p{
       font-size: 13px;

@@ -6,7 +6,6 @@ header.header {
   z-index: 1000;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 251, 242, 0));
-  //background: #ff5252;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -33,6 +32,7 @@ header.header {
         float: left;
         margin: 0 28px;
         a {
+          font-size: 14px;
           display: block;
           color: #ffffff;
           text-transform: uppercase;

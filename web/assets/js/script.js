@@ -4,17 +4,22 @@ $(document).ready(function() {
     /**
      *  UI 스크립트
      */
- myApp.init();
+    Portfolio.init();
 
 
 });
 
-var myApp = {
+var Portfolio = {
     init: function () {
-        myApp.header();
-        myApp.main();
-        myApp.TopBtn();
+        Portfolio.header();
+        Portfolio.main();
+        Portfolio.TopBtn();
+
+
     },
+
+
+
     header: function () {
         const gnb = $('.nav li a');
         const menuSection = $('#menu-section');
@@ -26,7 +31,7 @@ var myApp = {
             var sct = $(window).scrollTop();
 
             if(sct > 500) {
-                header.addClass('is-active');
+                header.addClass('is-active' );
             }else {
                 header.removeClass('is-active');
             }
@@ -52,6 +57,7 @@ var myApp = {
         const mainSection = $('.main-section');
         const portfolioMenu = $('.portfolio-btn');
         const portfolioContent = $('.portfolio-work-items');
+        const doc = $('html,body');
 
         $('.main-visual').slick({
             dots: true,
@@ -64,23 +70,21 @@ var myApp = {
             autoplayspeed: 1000
         });
 
-        AOS.init({
-            duration: 1000,
-            offset: 0,
-            delay: 100,
-            easing: 'easeInOutBack',
-        });
+        TweenMax.from('.top-text', 1, {y:-300, opacity:0})
+        TweenMax.from('.main-text', 2, {scale:4, rotationX:360, opacity:0})
+        TweenMax.from('.en', 2.5, {y:300, opacity:0})
 
-        $('.main-visual-section').on('mousewheel', function (event,delta) {
-            if (delta > 0) {
-                var prev = $(this).prev().offset().top;
 
-                $('html,body').stop().animate({'scrollTop': prev}, 1000, 'easeInQuart');
-            } else if (delta < 0) {
-                var next = $(this).next().offset().top;
-                $('html,body').stop().animate({'scrollTop': next - 80}, 1000, 'easeInQuart');
-            }
-        });
+        // $('.main-visual-section').on('mousewheel', function (event,delta) {
+        //     if (delta > 0) {
+        //         var prev = $(this).prev().offset().top;
+        //
+        //         $('html,body').stop().animate({'scrollTop': prev}, 1000, 'easeInQuart');
+        //     } else if (delta < 0) {
+        //         var next = $(this).next().offset().top;
+        //         $('html,body').stop().animate({'scrollTop': next - 80}, 1000, 'easeInQuart');
+        //     }
+        // });
 
         $(window).on('scroll',function () {
             var sct =$(window).scrollTop();
@@ -105,6 +109,11 @@ var myApp = {
             portfolioContent.eq(idx).fadeIn(600).addClass('is-active').siblings().fadeOut(600).removeClass('is-active');
 
         }).eq(0).trigger('click');
+
+        $('.mouse').click(function () {
+            doc.stop().animate({scrollTop: $('#about-me').offset().top}, 1500, 'easeOutExpo');
+            return false;
+        })
 
     },
 

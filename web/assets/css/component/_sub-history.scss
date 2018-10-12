@@ -1,0 +1,285 @@
+
+.history {
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .top-visual {
+    height: 550px;
+    position: relative;
+    .visual-bg {
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/img/sub-top.jpg") 50% 50% no-repeat / cover;
+    }
+    .screen {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    h1 {
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #ffffff;
+      position: absolute;
+      font-weight: 500;
+      top: 44%;
+      left: calc(50% - 242px);
+      min-width: 500px;
+    }
+    p {
+      min-width: 420px;
+      color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      font-size: 14px;
+      text-align: center;
+      top: 56%;
+      left: calc(50% - 209px);
+    }
+  }
+  .main-content {
+    padding: 100px 0;
+    background: url("../../assets/img/bg.png");
+    .top-menu {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      .l-content {
+        width: 60%;
+        padding-right: 50px;
+        p {
+          margin-top: 30px;
+          font-size: 16px;
+          color: #222;
+        }
+      }
+      .r-content {
+        background: #000;
+        border: 10px solid #ffffff;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        width: 340px;
+        height: 340px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+        background: url("../../assets/img/photo.jpg") 50% 50% no-repeat;
+        -webkit-background-size: 180%;
+        background-size: 180%;
+      }
+    }
+    .btom-menu {
+      margin-top: 80px;
+      display: flex;
+      p {
+        font-size: 14px;
+        margin-top: 20px;
+        strong {
+          font-weight: 600;
+          margin-right: 10px;
+        }
+      }
+      .btm-l-con {
+        width: 50%;
+      }
+      .btm-r-con {
+        width: 50%;
+        display: flex;
+        .tit-area {
+          width: 40%;
+        }
+        .form-area {
+          width: 60%;
+          display: block;
+          input {
+            height: 40px;
+            width: 49.5%;
+            float: left;
+            padding-left: 15px;
+            font-size: 12px;
+            background: 0;
+            border: 1px solid #ccc;
+            + input {
+              margin-left: 1%;
+            }
+          }
+          textarea {
+            resize: vertical;
+            background: 0;
+            margin-top: 7px;
+            width: 100%;
+            padding: 15px;
+            display: inline-block;
+            font-size: 12px;
+            border: 1px solid #ccc;
+          }
+          button {
+            width: 100%;
+            background: #363636;
+            border: 0;
+            color: #ffffff;
+            height: 30px;
+            font-size: 14px;
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+    .history {
+      margin-top: 70px;
+      .history-content {
+        overflow-x: auto;
+        .history-con {
+          width: 1350px;
+          height: 270px;
+        }
+        .top-text {
+          margin-top: 40px;
+          .line {
+            margin-right: 20px;
+          }
+          .text {
+            float: left;
+            margin-left: 30px;
+            width: 175px;
+          }
+          .text2 {
+            margin-left: 218px;
+            width: 180px;
+            .line {
+              background: #8ec9cd;
+            }
+          }
+          .text3 {
+            margin-left: 200px;
+            width: 275px;
+            .line {
+              background: #ffc90a;
+            }
+          }
+        }
+        .btom-text {
+          margin-top: -39px;
+          .text {
+            display: inline-block;
+            width: 175px;
+            margin-left: 55px;
+          }
+          .text-group {
+            float: left;
+            text-align: right;
+            margin-top: 35px;
+          }
+          .line {
+            margin-left: 20px;
+            background: #8fcca2;
+          }
+          .text5 {
+            margin-left: 243px;
+            width: 205px;
+            .line {
+              background: #6f7b93;
+            }
+          }
+          .text6 {
+            margin-left: 87px;
+            width: 320px;
+            .line {
+              background: #ec6d5e;
+            }
+          }
+        }
+        .line {
+          float: left;
+          display: inline-block;
+          width: 2px;
+          background: #ec6d5e;
+          height: 115px;
+        }
+        .day {
+          font-size: 16px;
+          color: #ec6d5e;
+          font-weight: 600;
+        }
+        .area {
+          margin-top: 10px;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        img {
+          width: 100%;
+          margin-top: -44px;
+        }
+      }
+    }
+    @include screen-xs {
+      .top-menu {
+        display: block;
+        .l-content {
+          width: 100%;
+          padding: 0;
+        }
+        .r-content {
+          display: none;
+        }
+      }
+    }
+    @include screen-lg {
+      .btom-menu{
+        .btm-l-con {
+          width: 48%;
+          margin-right: 2%;
+        }
+        .btm-r-con {
+          .tit-area {
+            min-width: 160px;
+
+          }
+        }
+      }
+    }
+    @include screen-sm {
+      .btom-menu{
+        display: block;
+        .btm-l-con {
+          width: 100%;
+        }
+        .btm-r-con {
+          margin-top: 70px;
+          width: 100%;
+        }
+      }
+    }
+    @include screen-xsm {
+      .btom-menu{
+        .btm-r-con {
+          display: block;
+          .tit-area {
+            width: 100%;
+          }
+          .form-area {
+            width: 100%;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .btom-content {
+    background: url("../../assets/img/bg.png");
+    height: 300px;
+    padding-top: 100px;
+    .root_daum_roughmap {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .wrap_controllers {
+      display: none;
+    }
+  }
+}
