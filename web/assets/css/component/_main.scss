@@ -61,37 +61,6 @@ main.main {
     height: 100vh;
     position: relative;
     background: #000;
-
-    .main-visual-text {
-      position: absolute;
-      text-align: center;
-      width: 100%;
-      top: 38%;
-      display: table-cell;
-      vertical-align:middle;
-      color: #ffffff;
-      z-index: 100;
-      font-size: 0;
-      .top-text {
-        font-size: 30px;
-        position: relative;
-      }
-      p {
-        color: #ffffff;
-        font-size: 30px;
-        font-weight: 100;
-      }
-      h1 {
-        text-transform: uppercase;
-        margin-top: 16px;
-        font-size: 45px;
-        line-height: 1.5;
-      }
-      .en {
-        font-size: 15px;
-        margin-top: 10px;
-      }
-    }
     .visual-btom-icon {
       position: absolute;
       bottom: 20px;
@@ -184,6 +153,33 @@ main.main {
         bottom: 0;
         right: 0;
       }
+      .visual-text {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 38%;
+        .top-text {
+          font-size: 30px;
+          position: relative;
+          font-weight: 400;
+          color: #ffffff;
+          animation:fadeOutRight 1s both;
+        }
+        h1 {
+          text-transform: uppercase;
+          margin-top: 16px;
+          font-size: 45px;
+          line-height: 1.5;
+          color: #fff;
+          animation:fadeOutLeft 1s both;
+        }
+        .en {
+          font-size: 15px;
+          margin-top: 10px;
+          color: #fff;
+          animation:fadeOutRight 1s both;
+        }
+      }
       &.slick-active {
         .visual-bg {
           opacity:1;
@@ -198,10 +194,97 @@ main.main {
         .visual-bg {
           background: url("../../assets/img/main_visual2.png") 50% 50% no-repeat / cover;
         }
+        .visual-text {
+          top: 32%;
+          h1 {
+            .yellow {
+              font-weight: 400;
+            }
+          }
+          .v-icon-img {
+            display: inline-block;
+            margin: 40px auto;
+            .v-icon {
+              float: left;
+              margin: 0 25px;
+              text-align: center;
+              animation:fadeOutRight 1.5s both;
+              .img {
+                i{
+                  font-size: 64px;
+                  color: #ffffff;
+                  width: 60px;
+                  height: 60px;
+                }
+                img {
+                  width: 60px;
+                  height: 60px;
+                }
+              }
+              p {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #ffffff;
+                margin-top: 16px;
+              }
+            }
+          }
+        }
       }
       &.visual3 {
         .visual-bg {
           background: url("../../assets/img/main_visual3.png") 50% 50% no-repeat / cover;
+        }
+        .visual-text {
+          .top-text {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1;
+          }
+          h1 {
+          }
+        }
+      }
+      &.slick-active {
+        .top-text {
+          animation:fadeInDown 0.8s both 0.5s;
+        }
+        h1 {
+          animation:fadeInUp 0.8s both 1s;
+        }
+        .en {
+          animation:fadeInUp 0.8s both 1.5s;
+        }
+        &.visual2 {
+          .visual-text {
+            h1 {
+              animation:fadeInDown 0.8s both 0.5s;
+            }
+            .v-icon-img {
+              .v-icon1 {
+                animation:fadeInUp 0.8s both 1s;
+              }
+              .v-icon2 {
+                animation:fadeInUp 0.8s both 1.4s;
+              }
+              .v-icon3 {
+                animation:fadeInUp 0.8s both 1.8s;
+              }
+              .v-icon4 {
+                animation:fadeInUp 0.8s both 2.2s;
+              }
+              .v-icon5 {
+                animation:fadeInUp 0.8s both 2.6s;
+              }
+              .v-icon6 {
+                animation:fadeInUp 0.8s both 3s;
+              }
+              .v-icon7 {
+                animation:fadeInUp 0.8s both 3.4s;
+              }
+            }
+          }
         }
       }
     }
@@ -225,6 +308,45 @@ main.main {
         button {
           display: none;
         }
+      }
+    }
+
+    @keyframes fadeInDown{
+      0%{
+        opacity:0;
+        transform:translate3d(0,-100%,0)
+      }
+      100%{
+        opacity:1;
+        transform:none
+      }
+    }
+    @keyframes fadeInUp{
+      0%{
+        opacity:0;
+        transform:translateY(100px)
+      }
+      100%{
+        opacity:1;
+        transform:translateY(0)
+      }
+    }
+    @keyframes fadeOutRight {
+      0% {
+        opacity: 1
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(100%)
+      }
+    }
+    @keyframes fadeOutLeft {
+      0% {
+        opacity: 1
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-100%)
       }
     }
   }
@@ -815,7 +937,7 @@ main.main {
         }
       }
     }
-    .portfolio-item2{
+    .portfolio-design{
       .portfolio-work-link {
         .link-img {
           img {
