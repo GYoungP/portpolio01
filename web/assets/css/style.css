@@ -1046,19 +1046,19 @@ main.main {
       main.main .main-visual .visual.slick-active.visual2 .visual-text h1 {
         animation: fadeInDown 0.8s both 0.5s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon1 {
-        animation: fadeInUp 0.8s both 1s; }
+        animation: fadeInUp 0.8s both 0.8s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon2 {
-        animation: fadeInUp 0.8s both 1.4s; }
+        animation: fadeInUp 0.8s both 1.2s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon3 {
-        animation: fadeInUp 0.8s both 1.8s; }
+        animation: fadeInUp 0.8s both 1.6s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon4 {
-        animation: fadeInUp 0.8s both 2.2s; }
+        animation: fadeInUp 0.8s both 2s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon5 {
-        animation: fadeInUp 0.8s both 2.6s; }
+        animation: fadeInUp 0.8s both 2.4s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon6 {
-        animation: fadeInUp 0.8s both 3s; }
+        animation: fadeInUp 0.8s both 2.8s; }
       main.main .main-visual .visual.slick-active.visual2 .visual-text .v-icon-img .v-icon7 {
-        animation: fadeInUp 0.8s both 3.2s; }
+        animation: fadeInUp 0.8s both 3.4s; }
     main.main .main-visual .slick-dots {
       position: absolute;
       bottom: 30%;
