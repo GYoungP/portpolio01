@@ -59,8 +59,7 @@ var Portfolio = {
         const portfolioContent = $('.portfolio-work-items');
         const doc = $('html,body');
         const visual = $('.visual');
-        const mainVisual= $('.main-visual');
-        const self = $(this);
+        const isActive = $('.is-active');
 
         $('.main-visual').slick({
             dots: true,
@@ -74,6 +73,10 @@ var Portfolio = {
         });
 
 
+
+        // isActive(function () {
+        //     TweenMax.from('.tit', 1, {y:100, opacity:0, scale: 3})
+        // })
 
         // $('.main-visual-section').on('mousewheel', function (event,delta) {
         //     if (delta > 0) {
@@ -90,15 +93,18 @@ var Portfolio = {
             var sct =$(window).scrollTop();
 
             mainSection.each(function () {
-                var self = $(this),
-                    mainSectionOft = self.offset().top;
+                const self = $(this);
+                const mainSectionOft = self.offset().top;
 
                 if (sct > mainSectionOft - 200) {
                     self.addClass('is-active').siblings().removeClass('is-active');
                 }
             });
-
         });
+
+
+
+
 
         portfolioMenu.click(function () {
             var self = $(this);
