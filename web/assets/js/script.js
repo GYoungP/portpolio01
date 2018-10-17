@@ -125,55 +125,55 @@ var Portfolio = {
         const webWorks = [
             {
                 link : "http://nnnbdnnn.dothome.co.kr/genesis/web/public/main.html",
-                imgUrl : "assets/img/page1.jpg",
+                imgUrl : "../assets/img/page1.jpg",
                 title : "genesis",
                 desc :"PC \n Html / scss / jquery"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/gbksoft/gbksoft/web/public/main.html",
-                imgUrl : "assets/img/page2-1.jpg",
+                imgUrl : "../assets/img/page2-1.jpg",
                 title : "gbksoft",
                 desc :"PC (responsive) \n Html / scss"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/drjart/web/public/main.html",
-                imgUrl : "assets/img/page3-1.jpg",
+                imgUrl : "../assets/img/page3-1.jpg",
                 title : "dr. jart",
                 desc :"PC \n Html / scss / jquery"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/maketer_/index.html",
-                imgUrl : "assets/img/page4-1.jpg",
+                imgUrl : "../assets/img/page4-1.jpg",
                 title : "maketer",
                 desc :"PC \n Html / css"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/matx/index.html",
-                imgUrl : "assets/img/page5-1.jpg",
+                imgUrl : "../assets/img/page5-1.jpg",
                 title : "matx",
                 desc :"PC (responsive) \n Html / scss / jquery"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/uddesign/uddesign.html",
-                imgUrl : "assets/img/page6-1.jpg",
+                imgUrl : "../assets/img/page6-1.jpg",
                 title : "united design",
                 desc :"PC (responsive) \n Html / css / jquery"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/3dukdak-studyda/3bunddukdak.html",
-                imgUrl : "assets/img/page8.jpg",
+                imgUrl : "../assets/img/page8.jpg",
                 title : "3분 뚝닭",
                 desc :"PC \n Html / css / jquery"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/dongsuh/dongsuh.html",
-                imgUrl : "assets/img/page13.jpg",
+                imgUrl : "../assets/img/page13.jpg",
                 title : "동서식품",
                 desc :"PC \n Html / css"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/ansonybebe/ansonybebe.html",
-                imgUrl : "assets/img/page12.jpg",
+                imgUrl : "../assets/img/page12.jpg",
                 title : "ansony",
                 desc :"PC \n Html / css"
             },
@@ -201,55 +201,55 @@ var Portfolio = {
         const designWorks = [
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/img/d-pape1.jpg",
-                imgUrl : "assets/img/d-pape1.jpg",
+                imgUrl : "../assets/img/d-pape1.jpg",
                 title : "blade & soul",
                 desc :"event popup \n design"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/img/d-pape2.jpg",
-                imgUrl : "assets/img/d-pape2.jpg",
+                imgUrl : "../assets/img/d-pape2.jpg",
                 title : "Re:NK",
                 desc :"event popup \n design"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/img/d-pape8.jpg",
-                imgUrl : "assets/img/d-pape8.jpg",
+                imgUrl : "../assets/img/d-pape8.jpg",
                 title : "edunavi",
                 desc :"book \n cover design"
             },
             {
                 link : "http://cnptstudio.com",
-                imgUrl : "assets/img/d-pape11-1.jpg",
+                imgUrl : "../assets/img/d-pape11-1.jpg",
                 title : "pt studio",
                 desc :"Company Homepage \n design"
             },
             {
                 link : "https://www.edunavi.kr/mobile/webzine.do",
-                imgUrl : "assets/img/d-pape9.jpg",
+                imgUrl : "../assets/img/d-pape9.jpg",
                 title : "edunavi",
                 desc :"webzine \n design"
             },
             {
                 link : "http://nnnbdnnn.dothome.co.kr/before/img/d-pape4.jpg",
-                imgUrl : "assets/img/d-pape4.jpg",
+                imgUrl : "../assets/img/d-pape4.jpg",
                 title : "Photoshop skill",
                 desc :"명암 스킬 \n 포토샵으로 필터를 사용하지 않고 직접 표현"
             },
             {
                 link : "http://c-gagu.com",
-                imgUrl : "assets/img/d-pape6.jpg",
+                imgUrl : "../assets/img/d-pape6.jpg",
                 title : "choice furniture",
                 desc :"cafe24 solution \n design / MD"
             },
             {
                 link : "http://www.gagujs.co.kr",
-                imgUrl : "assets/img/d-pape7.jpg",
+                imgUrl : "../assets/img/d-pape7.jpg",
                 title : "joas furniture",
                 desc :"shopping mall \n design / MD"
             },
             {
                 link : "http://www.bestgagu.com",
-                imgUrl : "assets/img/d-pape12.jpg",
+                imgUrl : "../assets/img/d-pape12.jpg",
                 title : "bestgagu",
                 desc :"shopping mall \n design"
             },
